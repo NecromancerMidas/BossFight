@@ -17,13 +17,13 @@ namespace BossFight
 
             while (fighting)
             {
-                hero.Action(boss);
+             Thread.Sleep(500);   hero.Action(boss);
                 fighting = boss.IsAlive();
                 if (!fighting)
                 {
                     break;
                 }
-                boss.Action(hero);
+                Thread.Sleep(500); boss.Action(hero);
                 fighting = hero.IsAlive();
 
             }
